@@ -1,9 +1,7 @@
 #include <cmath>
 #include <iostream>
 
-double fx(const double& x) {
-  return (x - 1) * exp(-pow(x, 2) / 2.0);
-}
+double fx(const double& x) { return (x - 1) * exp(-pow(x, 2) / 2.0); }
 
 double dfx(const double& x) {
   return exp(-pow(x, 2) / 2.0) - x * (x - 1) * exp(-pow(x, 2) / 2.0);
@@ -39,7 +37,8 @@ void solve(double a0, double b0, const double epsilon) {
   std::cout << "Root found at: " << xStar << " with function value: " << fStar
             << " after " << k << " iterations." << std::endl;
   std::cout << "Function was called " << fx_counter << " times." << std::endl;
-  std::cout << "Derivative was called " << dfx_counter << " times." << std::endl;
+  std::cout << "Derivative was called " << dfx_counter << " times."
+            << std::endl;
 }
 
 int main() {
